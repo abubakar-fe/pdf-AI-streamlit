@@ -1,0 +1,10 @@
+PyPDF2
+openai
+tiktoken
+streamlit
+langChain
+python-dotenv
+langchain-openai
+langchain_community
+faiss-cpu
+langchain-text-splitters
