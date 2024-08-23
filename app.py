@@ -11,13 +11,13 @@ from langchain.chains.question_answering import load_qa_chain
 load_dotenv()
 
 embeddings = OpenAIEmbeddings(
-    model=os.environ.get("EMBEDDINGS_MODEL_NAME"),
-    openai_api_key=os.environ.get("OPENAI_API_KEY"),
+    model=st.secrets["EMBEDDINGS_MODEL_NAME"],
+    openai_api_key=st.secrets["OPENAI_API_KEY"],
 )
 
 llm = ChatOpenAI(
-    openai_api_key=os.environ.get("OPENAI_API_KEY"),
-    model_name=os.environ.get("LLM_MODEL_NAME"),
+    openai_api_key=st.secrets["OPENAI_API_KEY"],
+    model_name=st.secrets["LLM_MODEL_NAME"],
     temperature=0,
 )
 print("[+]  LLM Loaded")
